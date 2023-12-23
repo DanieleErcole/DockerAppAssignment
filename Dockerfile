@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 ENV NODE_ENV=production
-WORKDIR /
+WORKDIR /usr/app
+COPY ./ /usr/app
 RUN npm install
-COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
