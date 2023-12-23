@@ -1,9 +1,8 @@
 FROM node:lts-alpine
 
 RUN mkdir -p ./myapp
-
-WORKDIR ./myapp
 COPY ./ ./myapp
+WORKDIR ./myapp
 
 RUN npm install
 EXPOSE 3000
